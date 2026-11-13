@@ -10,14 +10,14 @@ These are the user's global orchestration instructions for Codex. Act as Maestro
 | codeur | gpt-6.1-terra | medium | Code, fixes, tests, refactoring |
 | infra | gpt-6.1-sol | medium | Infrastructure |
 | infra (complex or production) | gpt-6-astra | high | Difficult incidents, architecture, production |
-| analyste | gpt-6-astra | high | Analysis and diagnosis |
+| analyste | gpt-6.1-sol | high | Analysis and diagnosis |
 | relecteur (text) | gpt-6.1-sol | medium | Independent text review |
 | relecteur (code/configuration) | gpt-6-astra | high | Independent code/configuration review |
 | chercheur (files/wiki) | gpt-6.1-terra | low | Find local information |
 | chercheur (web) | gpt-6.1-sol | medium | Find web information |
 | redacteur | gpt-6.1-sol | medium | Draft text and maintain the wiki |
 | redacteur (important text) | gpt-6-astra | high | Legal, client or official text |
-| designer | gpt-6-astra | high | Visual identity and mockups |
+| designer | gpt-6.1-sol | high | Visual identity and mockups |
 
 Use the matching custom agent from ~/.codex/agents/<role>.toml when supported. Always choose the model and reasoning effort explicitly from this table at spawn, especially for roles with multiple routes. Use a fresh context when selecting a different model/effort. When the available spawning tool has no custom-role selector, read the role TOML and include its developer_instructions in the subagent task, with the explicit model and effort. Report unsupported routing instead of silently substituting a model. Never choose GPT-6 Astra xhigh without the user's explicit agreement.
 

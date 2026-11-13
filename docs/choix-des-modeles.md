@@ -123,11 +123,11 @@ Aucun modèle « Codex » récent n'était listé sur Artificial Analysis à cet
 | Maestro | GPT-6.1 Sol, medium | bon niveau en raisonnement et en recherche, environ 5 fois moins cher au token qu'Astra (voir « Évolutions ») |
 | Codeur | GPT-6.1 Terra, medium | meilleur en code, le moins cher |
 | Infra | GPT-6.1 Sol, medium ; GPT-6 Astra, high si complexe ou production | même logique que Sonnet / Opus ; Astra est le meilleur en diagnostic de panne (ITBench SRE 48,6 %) |
-| Analyste | GPT-6 Astra, high | meilleur en analyse de données et en raisonnement |
+| Analyste | GPT-6.1 Sol, high | presque à égalité avec Astra en analyse de données (82,7 contre 83,0), raisonnement (92,6 contre 92,7) et recherche (90,0 contre 90,6), pour environ 6 fois moins cher par tâche réussie ; Astra ne garde un net avantage qu'en agentique (75,6 contre 65,6), peu utile pour un analyste en lecture seule |
 | Relecteur | GPT-6.1 Sol, medium (texte) ; GPT-6 Astra, high (code, configuration) | Sol est très transparent (92) ; pour le code, un modèle différent de celui du Codeur donne un vrai regard neuf |
 | Chercheur | GPT-6.1 Terra, low (fichiers) ; GPT-6.1 Sol, medium (web) | Terra hallucine le moins ; Sol est le meilleur en navigation et presque le meilleur en recherche |
 | Rédacteur | GPT-6.1 Sol, medium ; GPT-6 Astra, high (textes importants) | écriture claire et organisée |
-| Designer | GPT-6 Astra, high | meilleur modèle OpenAI en design et en Code2Video |
+| Designer | GPT-6.1 Sol, high | design LiveBench quasi égal à Astra (79,6 contre 80,0), bon en design fait en code (Code2Video 1369 contre 1427) et en 3D (1121 contre 1168), pour environ 6 fois moins cher ; Terra est écarté malgré un coût un peu plus bas (Code2Video environ 1021, chiffre moins sûr ; 3D 954) |
 
 ### Claude ou Codex ?
 
@@ -146,6 +146,8 @@ Aucun modèle « Codex » récent n'était listé sur Artificial Analysis à cet
 - 2026-11-12 — Variante Codex : Maestro sur GPT-6 Astra, medium (meilleur score agentique, 75,6).
 - 2026-11-13 — Chercheur Claude : Haiku 5.5, effort bas → moyen, après un premier test réel.
 - 2026-11-13 — Maestro Codex : GPT-6 Astra → GPT-6.1 Sol, effort medium, pour réduire la consommation de tokens. Astra coûte environ 5 fois le prix de Sol au token, et le Maestro, qui tient la discussion principale, en consomme une grande part. Les modèles et efforts par défaut sont fixés dans les fichiers TOML : Chercheur Terra low ; Infra, Rédacteur et Relecteur Sol medium. Les routes Astra (Infra complexe, Relecteur code, Analyste, Designer, Rédacteur important) restent inchangées. Le gain réel reste à mesurer.
+- 2026-11-13 — Analyste Codex : GPT-6 Astra → GPT-6.1 Sol, effort high, pour réduire le coût.
+- 2026-11-13 — Designer Codex : GPT-6 Astra → GPT-6.1 Sol, effort high, pour réduire le coût.
 
 ## Limites des benchmarks
 

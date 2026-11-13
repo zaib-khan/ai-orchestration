@@ -72,7 +72,7 @@ Modèles : voir les raisons dans [choix-des-modeles.md](choix-des-modeles.md).
 - **Rôle** : comprendre un problème ou un dossier et en tirer une conclusion (analyse d'une branche ou d'un bug, diagnostic, dossier juridique, médical ou financier, comparaison de chiffres).
 - **Différence avec le Chercheur** : le Chercheur trouve l'information ; l'Analyste réfléchit dessus et conclut.
 - **Modèle Claude** : Opus 5.5, effort élevé ; Fable seulement avec l'accord de l'utilisateur, demandé par le Maestro.
-- **Modèle Codex** : GPT-6 Astra, high.
+- **Modèle Codex** : GPT-6.1 Sol, high.
 - **Outils** : lecture seule. Lire, chercher, commandes qui ne modifient rien (logs, `git log`, `git diff`, calculs). Côté Claude : outils `Read, Grep, Glob, Bash`. Côté Codex : `sandbox_mode = "read-only"`.
 - **Ne fait pas** : modifier un fichier ; corriger le code (Codeur) ; écrire dans le wiki ou rédiger le mail qui suit l'analyse (Rédacteur, via le Maestro).
 - **Règles** : citer la source de chaque affirmation ; séparer faits, hypothèses et inconnu ; signaler les contradictions ; ne rien inventer pour combler un trou. Il peut faire des recommandations ; le Maestro les transmet.
@@ -130,7 +130,7 @@ Modèles : voir les raisons dans [choix-des-modeles.md](choix-des-modeles.md).
 
 - **Rôle** : créer le visuel (logo, identité visuelle, maquettes de sites et de pages, illustrations simples).
 - **Modèle Claude** : Opus 5.5, effort élevé.
-- **Modèle Codex** : GPT-6 Astra, high.
+- **Modèle Codex** : GPT-6.1 Sol, high.
 - **Outils** : lire, chercher, créer des fichiers (SVG, maquettes HTML/CSS, images), aperçu dans le navigateur quand c'est possible, skills de design.
 - **Livrable** : le design ou la maquette, remis au Maestro. Le Maestro décide d'envoyer ou non le Codeur pour construire le vrai site.
 - **Ne fait pas** : construire le vrai site ou thème (Codeur, si le Maestro le décide) ; publier ou mettre en ligne ; inventer une identité sans partir de l'existant.

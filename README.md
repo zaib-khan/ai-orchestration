@@ -21,11 +21,11 @@ Dépôt : https://github.com/zaib-khan/ai-orchestration
 | Maestro | dialoguer, choisir, déléguer, vérifier, rendre compte | Opus 5.5, moyen | GPT-6.1 Sol, medium |
 | Codeur | écrire et corriger du code | Opus 5.5, moyen | GPT-6.1 Terra, medium |
 | Infra | déployer, infrastructure, serveurs, CI/CD | Sonnet 5.5, moyen ; Opus 5.5, élevé si complexe ou production | GPT-6.1 Sol, medium ; GPT-6 Astra, high si complexe ou production |
-| Analyste | analyser et conclure (lecture seule) | Opus 5.5, élevé ; Fable seulement avec accord | GPT-6 Astra, high |
+| Analyste | analyser et conclure (lecture seule) | Opus 5.5, élevé ; Fable seulement avec accord | GPT-6.1 Sol, high |
 | Relecteur | relire un travail fini (sur demande) | Sonnet 5.5, moyen (texte) ; Opus 5.5, élevé (code, configuration) | GPT-6.1 Sol, medium (texte) ; GPT-6 Astra, high (code, configuration) |
 | Chercheur | trouver une information (lecture seule) | Haiku 5.5, moyen (fichiers) ; Sonnet 5.5, moyen (web) | GPT-6.1 Terra, low (fichiers) ; GPT-6.1 Sol, medium (web) |
 | Rédacteur | écrire des textes en brouillon | Sonnet 5.5, moyen ; Opus 5.5, élevé (textes importants) | GPT-6.1 Sol, medium ; GPT-6 Astra, high (textes importants) |
-| Designer | logo, identité visuelle, maquettes | Opus 5.5, élevé | GPT-6 Astra, high |
+| Designer | logo, identité visuelle, maquettes | Opus 5.5, élevé | GPT-6.1 Sol, high |
 
 Fiches détaillées : [docs/agents.md](docs/agents.md). Raisons des choix et chiffres : [docs/choix-des-modeles.md](docs/choix-des-modeles.md).
 
