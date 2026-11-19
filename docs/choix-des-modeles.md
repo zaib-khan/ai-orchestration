@@ -1,6 +1,6 @@
 # Choix des modèles
 
-Ce document explique pourquoi chaque agent utilise tel modèle et tel effort, côté Claude Code et côté Codex. Les chiffres viennent de deux benchmarks publics, relevés le **12 novembre 2026** :
+Ce document présente les choix de modèles et leurs évolutions, côté Claude Code et côté Codex. Les chiffres ci-dessous viennent de deux benchmarks publics, relevés le **12 novembre 2026** ; ils ne couvrent pas tous les choix actuels :
 
 - **LiveBench 2.0** (livebench.ai, release du 2026-11-06), filtres Anthropic et OpenAI ;
 - **Artificial Analysis** (artificialanalysis.ai/models, Intelligence Index v5.0.1, tests à l'effort maximal).
@@ -124,15 +124,15 @@ Aucun modèle « Codex » récent n'était listé sur Artificial Analysis à cet
 | Codeur | GPT-6.1 Terra, medium | meilleur en code, le moins cher |
 | Infra | GPT-6.1 Sol, medium ; GPT-6 Astra, high si complexe ou production | même logique que Sonnet / Opus ; Astra est le meilleur en diagnostic de panne (ITBench SRE 48,6 %) |
 | Analyste | GPT-6.1 Sol, high | presque à égalité avec Astra en analyse de données (82,7 contre 83,0), raisonnement (92,6 contre 92,7) et recherche (90,0 contre 90,6), pour environ 6 fois moins cher par tâche réussie ; Astra ne garde un net avantage qu'en agentique (75,6 contre 65,6), peu utile pour un analyste en lecture seule |
-| Relecteur | GPT-6.1 Sol, medium (texte) ; GPT-6 Astra, high (code, configuration) | Sol est très transparent (92) ; pour le code, un modèle différent de celui du Codeur donne un vrai regard neuf |
+| Relecteur | GPT-6.1 Sol, medium (texte) ; GPT-6.2 Astra, medium (code, configuration) | Sol est très transparent (92) ; pour le code, le modèle diffère de celui du Codeur. Pas de chiffre relevé ici pour GPT-6.2 Astra |
 | Chercheur | GPT-6.1 Terra, low (fichiers) ; GPT-6.1 Sol, medium (web) | Terra hallucine le moins ; Sol est le meilleur en navigation et presque le meilleur en recherche |
-| Rédacteur | GPT-6.1 Sol, medium ; GPT-6 Astra, high (textes importants) | écriture claire et organisée |
-| Designer | GPT-6.1 Sol, high | design LiveBench quasi égal à Astra (79,6 contre 80,0), bon en design fait en code (Code2Video 1369 contre 1427) et en 3D (1121 contre 1168), pour environ 6 fois moins cher ; Terra est écarté malgré un coût un peu plus bas (Code2Video environ 1021, chiffre moins sûr ; 3D 954) |
+| Rédacteur | GPT-6.1 Sol, medium ; GPT-6 Astra, medium (textes importants) | écriture claire et organisée ; effort des textes importants actualisé selon le choix de l'utilisateur |
+| Designer | GPT-6.2 Sol, high | choix de l'utilisateur ; pas de chiffre relevé ici pour GPT-6.2 Sol |
 
 ### Claude ou Codex ?
 
 - Claude reste meilleur pour le **Rédacteur** (expressivité : Sol 53, Sonnet 73, Opus 90), utile pour imiter le style de l'utilisateur.
-- Claude reste meilleur pour le **Designer** (design 83,3 contre 80,0 ; Code2Video 1536 contre 1427).
+- Dans les chiffres du 12 novembre, Opus 5.5 devance GPT-6 Astra en design (83,3 contre 80,0) et Code2Video (1536 contre 1427) ; GPT-6.2 Sol n'y figure pas.
 - OpenAI n'a pas d'équivalent de Fable. La règle d'accord porte donc sur GPT-6 Astra en effort xhigh.
 
 ## Modèles premium : seulement avec accord
@@ -148,6 +148,7 @@ Aucun modèle « Codex » récent n'était listé sur Artificial Analysis à cet
 - 2026-11-13 — Maestro Codex : GPT-6 Astra → GPT-6.1 Sol, effort medium, pour réduire la consommation de tokens. Astra coûte environ 5 fois le prix de Sol au token, et le Maestro, qui tient la discussion principale, en consomme une grande part. Les modèles et efforts par défaut sont fixés dans les fichiers TOML : Chercheur Terra low ; Infra, Rédacteur et Relecteur Sol medium. Les routes Astra (Infra complexe, Relecteur code, Analyste, Designer, Rédacteur important) restent inchangées. Le gain réel reste à mesurer.
 - 2026-11-13 — Analyste Codex : GPT-6 Astra → GPT-6.1 Sol, effort high, pour réduire le coût.
 - 2026-11-13 — Designer Codex : GPT-6 Astra → GPT-6.1 Sol, effort high, pour réduire le coût.
+- 2026-11-19 — Choix utilisateur Codex : Relecteur code/configuration GPT-6 Astra high → GPT-6.2 Astra medium ; Rédacteur textes importants GPT-6 Astra high → medium ; Designer GPT-6.1 Sol → GPT-6.2 Sol, effort high. Les benchmarks ci-dessus n'ont pas été actualisés.
 
 ## Limites des benchmarks
 

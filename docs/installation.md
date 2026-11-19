@@ -104,7 +104,7 @@ Ce sont des clés de **premier niveau** : placez-les en haut du fichier, **avant
 
 ### 5. Vérifier les modèles
 
-Ouvrez une nouvelle session Codex et tapez `/model`. Vérifiez que `gpt-6.1-sol`, `gpt-6.1-terra` et `gpt-6-astra` sont proposés. Si un nom manque ou a changé, corrigez-le dans `~/.codex/AGENTS.md`, dans les fichiers `~/.codex/agents/*.toml` et dans `~/.codex/config.toml`.
+Ouvrez une nouvelle session Codex et tapez `/model`. Vérifiez que `gpt-6.1-sol`, `gpt-6.1-terra`, `gpt-6-astra`, `gpt-6.2-astra` et `gpt-6.2-sol` sont proposés. Si un nom manque ou a changé, corrigez-le dans `~/.codex/AGENTS.md`, dans les fichiers `~/.codex/agents/*.toml` et dans `~/.codex/config.toml`.
 
 ### Bon à savoir (Codex)
 

@@ -22,10 +22,10 @@ Dépôt : https://github.com/zaib-khan/ai-orchestration
 | Codeur | écrire et corriger du code | Opus 5.5, moyen | GPT-6.1 Terra, medium |
 | Infra | déployer, infrastructure, serveurs, CI/CD | Sonnet 5.5, moyen ; Opus 5.5, élevé si complexe ou production | GPT-6.1 Sol, medium ; GPT-6 Astra, high si complexe ou production |
 | Analyste | analyser et conclure (lecture seule) | Opus 5.5, élevé ; Fable seulement avec accord | GPT-6.1 Sol, high |
-| Relecteur | relire un travail fini (sur demande) | Sonnet 5.5, moyen (texte) ; Opus 5.5, élevé (code, configuration) | GPT-6.1 Sol, medium (texte) ; GPT-6 Astra, high (code, configuration) |
+| Relecteur | relire un travail fini (sur demande) | Sonnet 5.5, moyen (texte) ; Opus 5.5, élevé (code, configuration) | GPT-6.1 Sol, medium (texte) ; GPT-6.2 Astra, medium (code, configuration) |
 | Chercheur | trouver une information (lecture seule) | Haiku 5.5, moyen (fichiers) ; Sonnet 5.5, moyen (web) | GPT-6.1 Terra, low (fichiers) ; GPT-6.1 Sol, medium (web) |
-| Rédacteur | écrire des textes en brouillon | Sonnet 5.5, moyen ; Opus 5.5, élevé (textes importants) | GPT-6.1 Sol, medium ; GPT-6 Astra, high (textes importants) |
-| Designer | logo, identité visuelle, maquettes | Opus 5.5, élevé | GPT-6.1 Sol, high |
+| Rédacteur | écrire des textes en brouillon | Sonnet 5.5, moyen ; Opus 5.5, élevé (textes importants) | GPT-6.1 Sol, medium ; GPT-6 Astra, medium (textes importants) |
+| Designer | logo, identité visuelle, maquettes | Opus 5.5, élevé | GPT-6.2 Sol, high |
 
 Fiches détaillées : [docs/agents.md](docs/agents.md). Raisons des choix et chiffres : [docs/choix-des-modeles.md](docs/choix-des-modeles.md).
 
@@ -158,7 +158,7 @@ Les consignes des agents sont en anglais ; la documentation est en français. Le
 
 ## Limites
 
-- **Benchmarks datés** : les chiffres et les choix de modèles datent du **12 novembre 2026**. Relancez le skill `update-agent-models` de temps en temps.
+- **Benchmarks datés** : les chiffres datent du **12 novembre 2026** et ne couvrent pas tous les choix actuels. Relancez le skill `update-agent-models` de temps en temps.
 - **Noms de modèles** : côté Codex, vérifiez les modèles réellement proposés avec `/model`. Un nom absent ou changé doit être corrigé dans `AGENTS.md` et les fichiers TOML.
 - **Lecture seule technique non garantie partout** : côté Claude, l'Analyste, le Relecteur et le Chercheur n'ont pas les outils d'écriture, mais ils ont `Bash` ; côté Codex, l'effet réel de `sandbox_mode = "read-only"` n'a pas été vérifié dans toutes les versions, et le Relecteur n'a pas ce réglage. La lecture seule repose donc aussi sur les consignes.
 - **Un modèle par défaut par fichier d'agent** : pour les rôles à plusieurs routes, c'est le Maestro qui passe le modèle et l'effort au lancement.

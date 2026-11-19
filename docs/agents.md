@@ -83,7 +83,7 @@ Modèles : voir les raisons dans [choix-des-modeles.md](choix-des-modeles.md).
 - **Rôle** : vérifier un travail fini (code, diff, merge request, mail, document, configuration, analyse) avec un regard neuf.
 - **Principe** : il relit sans connaître le raisonnement de l'auteur. Le Maestro lui donne la demande, les exigences et le résultat, pas le raisonnement.
 - **Modèle Claude** : Sonnet 5.5, effort moyen (texte) ; Opus 5.5, effort élevé (code, configuration).
-- **Modèle Codex** : GPT-6.1 Sol, medium (texte) ; GPT-6 Astra, high (code, configuration).
+- **Modèle Codex** : GPT-6.1 Sol, medium (texte) ; GPT-6.2 Astra, medium (code, configuration).
 - **Outils** : lire, chercher, lancer les tests et des commandes qui ne modifient rien. Côté Claude : outils `Read, Grep, Glob, Bash`. Côté Codex : pas de `sandbox_mode` en lecture seule, car ses tests peuvent avoir besoin d'écrire ; la lecture seule repose sur la consigne.
 - **Ne fait pas** : corriger lui-même. Le Maestro renvoie les remarques à l'agent auteur.
 - **Quand** : **jamais automatiquement**. À la fin d'une tâche, le Maestro demande « Tu veux une relecture ? » seulement si la tâche :
@@ -117,7 +117,7 @@ Modèles : voir les raisons dans [choix-des-modeles.md](choix-des-modeles.md).
 
 - **Rôle** : écrire des textes en brouillon (mails, préparation de réunions, runbooks, guides, documents) et faire les mises à jour de wiki déléguées par le Maestro.
 - **Modèle Claude** : Sonnet 5.5, effort moyen ; Opus 5.5, effort élevé pour les textes importants (avocat, client, document officiel).
-- **Modèle Codex** : GPT-6.1 Sol, medium ; GPT-6 Astra, high pour les textes importants.
+- **Modèle Codex** : GPT-6.1 Sol, medium ; GPT-6 Astra, medium pour les textes importants.
 - **Outils** : lire, chercher, écrire et modifier des fichiers (brouillons, pages de wiki). Côté Claude : outils `Read, Grep, Glob, Write, Edit` (pas de commande shell).
 - **Langue** : français ou anglais, selon le destinataire.
 - **Envoi** : brouillons seulement. L'utilisateur envoie, ou le Maestro avec l'accord explicite de l'utilisateur pour ce message.
@@ -130,7 +130,7 @@ Modèles : voir les raisons dans [choix-des-modeles.md](choix-des-modeles.md).
 
 - **Rôle** : créer le visuel (logo, identité visuelle, maquettes de sites et de pages, illustrations simples).
 - **Modèle Claude** : Opus 5.5, effort élevé.
-- **Modèle Codex** : GPT-6.1 Sol, high.
+- **Modèle Codex** : GPT-6.2 Sol, high.
 - **Outils** : lire, chercher, créer des fichiers (SVG, maquettes HTML/CSS, images), aperçu dans le navigateur quand c'est possible, skills de design.
 - **Livrable** : le design ou la maquette, remis au Maestro. Le Maestro décide d'envoyer ou non le Codeur pour construire le vrai site.
 - **Ne fait pas** : construire le vrai site ou thème (Codeur, si le Maestro le décide) ; publier ou mettre en ligne ; inventer une identité sans partir de l'existant.
